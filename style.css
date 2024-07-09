@@ -61,3 +61,15 @@ h1{
 .equal-btn-font:hover{
     background-color: #F4A240;
 }
+
+@media (min-width:500px) and (max-width:1600px){
+    .container{
+        height: 80vh;
+    }
+    .btn{
+        height: 10vmin;
+    }
+    #display{
+        width: 61vmin;
+    }
+}
