@@ -73,3 +73,18 @@ h1{
         width: 61vmin;
     }
 }
+
+@media (min-width:300px) and (max-width:499px){
+    .container{
+
+        height: 85vh;
+    }
+    .btn{
+        height: 18vmin;
+        width: 18vmin;
+    }
+    #display{
+        width: 75vmin;
+        height: 15vmin;
+    }
+}
