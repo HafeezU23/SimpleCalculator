@@ -1,0 +1,57 @@
+let btns=document.querySelectorAll(".btn");
+let inputs=document.querySelector("input");
+let string="";
+inputs.readOnly=true;
+inputs.disabled=true;
+btns.forEach((btn)=>{
+     btn.addEventListener("click", (val)=>{
+        
+        if(val.target.innerHTML=='='){
+            if(string.includes('%')){
+                    string=eval(string.replace(/\%/g, "/100"));
+                    
+            }
+            else if(string.includes('^')){
+                
+                    string=eval(string.replace(/\^/g, "**"));
+            }
+            else if(string.includes('Sqrt')){
+                
+                string=eval(string.replace(/Sqrt/g, "**1/2"));
+        }
+            else{
+            string=eval(string);
+           
+            }
+            inputs.value=string;
+            let sound= new Audio("equalclick.mp3");
+            sound.play();
+            
+           
+            
+
+         }
+         else if(val.target.innerHTML=='C'){
+               string="";
+               let sound= new Audio("btnsound.mp3");
+                sound.play();
+                inputs.value=string;
+                
+        }
+        else if(val.target.innerHTML=='Del'){
+                  string=string.substring("",string.length-1);
+                  let sound= new Audio("btnsound.mp3");
+                  sound.play();
+                  inputs.value=string;
+        }
+        else{
+       string=string+val.target.innerHTML;
+       let sound= new Audio("btnsound.mp3");
+       sound.play();
+       inputs.value=string;
+       
+
+        }
+       
+     })
+})
