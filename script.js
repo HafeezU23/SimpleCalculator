@@ -15,10 +15,7 @@ btns.forEach((btn)=>{
                 
                     string=eval(string.replace(/\^/g, "**"));
             }
-            else if(string.includes('Sqrt')){
-                
-                string=eval(string.replace(/Sqrt/g, "**1/2"));
-        }
+            
             else{
             string=eval(string);
            
