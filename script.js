@@ -24,7 +24,7 @@ btns.forEach((btn)=>{
            
             }
             inputs.value=string;
-            let sound= new Audio("equalclick.mp3");
+            let sound= new Audio("output-sound.mp3");
             sound.play();
             
            
@@ -33,20 +33,20 @@ btns.forEach((btn)=>{
          }
          else if(val.target.innerHTML=='C'){
                string="";
-               let sound= new Audio("btnsound.mp3");
+               let sound= new Audio("click-sound.mp3");
                 sound.play();
                 inputs.value=string;
                 
         }
         else if(val.target.innerHTML=='Del'){
                   string=string.substring("",string.length-1);
-                  let sound= new Audio("btnsound.mp3");
+                  let sound= new Audio("click-sound.mp3");
                   sound.play();
                   inputs.value=string;
         }
         else{
        string=string+val.target.innerHTML;
-       let sound= new Audio("btnsound.mp3");
+       let sound= new Audio("click-sound.mp3");
        sound.play();
        inputs.value=string;
        
